@@ -7,14 +7,7 @@ class Solution:
     def solve1(self, nums: list[int], target: int) -> list[int]:
         """Simple double recursion search.
         Picks one number, check rest of the list. Increment and repeat.
-        Time complexity: O(n^2)
-
-        Args:
-            nums: list of numbers to pick from.
-            target: desired sum of two numbers from the list.
-
-        Returns:
-            A list of the two indexes that add up to the target number 
+        Time complexity: O(n^2).
         """
         for i in range(0, len(nums)):
             for j in range(i + 1, len(nums)):
@@ -27,14 +20,7 @@ class Solution:
         """Uses a dictionary to save the target.
         If the current number is not in dict, add a key of (this number - target),
         and a value the current index.
-        Time complexity: O(n)
-
-        Args:
-            nums: list of numbers to pick from.
-            target: desired sum of two numbers from the list.
-
-        Returns:
-            A list of the two indexes that add up to the target number 
+        Time complexity: O(n).
         """
         my_dict = {}
         for i, value in enumerate(nums):
@@ -49,7 +35,7 @@ class Solution:
 
     # Other's solution
     def other1(self, nums: list[int], target: int) -> list[int]:
-        """Example Docstring."""
+        """A solution posted by another user."""
         numMap = {}
         n = len(nums)
 
