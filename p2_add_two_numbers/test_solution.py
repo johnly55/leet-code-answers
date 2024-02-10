@@ -63,7 +63,7 @@ class TestSolution(unittest.TestCase):
             result = extract_result(result)
             self.assertEqual(result, return_solution())
 
-    @unittest.skipIf(len(other_funcs), 0)
+    @unittest.skipIf(not len(other_funcs), 'No functions found.')
     def test_other_solutions(self):
         for func in other_funcs:
             result = call_func(func)

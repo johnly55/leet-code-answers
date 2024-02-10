@@ -8,27 +8,30 @@ from solution import Solution
 # Set of predetermined data to imput into a function,
 # and data to check if said function outputs properly.
 test_case = {
+    'input1': 'abcabcbb',
+    'solution1': 3
 }
 solution = Solution()
 # My solutions.
-my_funcs = [solution.solve1]
+my_funcs = [solution.solve1, solution.solve2]
 # Other's solutions to compare execution time.
-other_funcs = [solution.other1]
+other_funcs = [solution.other1, solution.other2, solution.other3]
 
 # Preparations.
 
 
 def call_func(func: list[Callable], **kwargs):
     """Remove need to pass parameters in test functions."""
-    pass
+    input1 = test_case['input1']
+    return func(input1)
 
 def return_solution():
     """Return the test case solution."""
-    pass
+    return test_case['solution1']
 
 def extract_result(result):
     """Extract comparable information from the result."""
-    pass
+    return result
 
 class TestSolution(unittest.TestCase):
     """Class to test the functions of the Solution class."""
